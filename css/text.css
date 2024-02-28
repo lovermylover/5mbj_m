@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; border:none; outline:none;}
+a{ text-decoration:none; color:#333;}
+dl,dt,dd,ol,ul,li{ list-style:none;}
+input,select,textarea{ cursor:pointer;}
+body,html{ color:#333; font-family:"微软雅黑"; width:100%; height:100%;}
+input,select{ cursor:pointer;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ color:#999; } 
+input:-moz-placeholder, textarea:-moz-placeholder{ color:#999; } 
+input::-moz-placeholder, textarea::-moz-placeholder{ color:#999; } 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder{ color:#999; } 
+input[type="button"], input[type="submit"], input[type="reset"]{ -webkit-appearance:none;}
+select{ -webkit-appearance:none;  text-align: center;    padding: 10px 2%;    font-size: 16px;
+    text-align-last: center;}
+
+.fl{ float:left;}
+.fr{ float:right;}
+.ov{ overflow:hidden;}
+
+
+.iphone__screen{ width:100%; height:100%; position:absolute; left:0; top:0;}
+.iphone__content{ position:relative; width:100%; height:100%;}
+.nav{
+  position:fixed;
+  z-index:100;
+  opacity:0;
+  width:100%;
+  height:100%;
+  -webkit-transition-property:all;
+  transition-property:all;
+  -webkit-transition-duration:300ms;
+          transition-duration:300ms;
+  -webkit-transform:translateX(-100%);
+          transform:translateX(-100%);
+}
+.nav--active .nav{ opacity:1; background-color:rgba(0,0,0,0.9); display:table; vertical-align:middle;}
+.nav__list{ text-align:center; display:table-cell; vertical-align:middle;}
+.nav__link{
+  font-size:0.975rem;
+  line-height:2rem;
+  color:#FFFFFF;
+  -webkit-transition:opacity 300ms ease-in-out;
+  transition:opacity 300ms ease-in-out;
+  opacity:0;
+  -webkit-transition-delay:500ms;
+          transition-delay:500ms;
+}
+.nav__trigger {
+	    display: block;
+    position: absolute;
+    width: 30px;
+    height: 26px;
+    right: 4%;
+    top: 13px;
+    z-index: 200;
+}.nav--active .nav__trigger{ opacity:0.5; position:fixed !important;}
+.nav__icon{
+  display:inline-block;
+  position:relative;
+  width:30px;
+  height:4px;
+  background-color:#fff;
+  -webkit-transition-property:background-color, -webkit-transform;
+  transition-property:background-color, -webkit-transform;
+  transition-property:background-color, transform;
+  transition-property:background-color, transform, -webkit-transform;
+  -webkit-transition-duration:300ms;
+          transition-duration:300ms;
+}
+.nav__icon:before,.nav__icon:after{
+  content:'';
+  display:block;
+  width:30px;
+  height:4px;
+  position:absolute;
+  background:#fff;
+  -webkit-transition-property:margin, -webkit-transform;
+  transition-property:margin, -webkit-transform;
+  transition-property:margin, transform;
+  transition-property:margin, transform, -webkit-transform;
+  -webkit-transition-duration:300ms;
+          transition-duration:300ms;
+}
+.nav__icon:before{ margin-top:-9px;}
+.nav__icon:after{ margin-top:9px;}
+.nav--active .nav__link{ opacity:1;}
+.nav--active .nav{
+  -webkit-transition:all 300ms ease-in-out;
+  transition:all 300ms ease-in-out;
+  -webkit-transform:translateX(0);
+          transform:translateX(0);
+}
+.nav--active .nav__icon{ background:rgba(0, 0, 0, 0);}
+.nav--active .nav__icon:before {
+  background:#eee;
+  margin-top:0;
+  -webkit-transform:rotate(45deg);
+          transform:rotate(45deg);
+}
+.nav--active .nav__icon:after {
+  background:#eee;
+  margin-top:0;
+  -webkit-transform:rotate(-45deg);
+          transform:rotate(-45deg);
+}
+
+/*home*/
+.logo{ width:100%; height:50px;        background: #fd3551;}
+.logo img{     display: block;
+    height: 50px;
+    padding-top: 2%;
+    /* margin: auto; */
+    margin-left: 2%;}
+
+/*banner*/ 
+.banner{ width:100%; position:relative; z-index:0; overflow:hidden;}
+.banner .bd{ position:absolute; width:100%; left:0; top:0;}
+.banner .bd li{ width:100%;}
+.banner .bd li img{ display:block; width:100%;}
+.banner .hd{ display:none;}
+.picScroll-left{
+	
+}
+.picScroll-left{
+	overflow:hidden;
+	margin-top:10px;
+}
+/*foot*/
+.footer{ width:100%; background-color:#fd3551;color: #fff; padding:1rem 3%; font-size:0.875rem; text-align:center; line-height:1.5rem;}
+
+/***********************************************************/
+
+.fbxc{
+	width: 46%;
+	height: 2rem;
+	float: left;
+	margin: 0 2%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	background-color: #000;
+	
+}
+.fbxc input{
+	width: 100%;
+	height: 100%;
+}
+
+.bao{
+	width: 83%;
+	margin: auto;
+}
+
+.zby{
+	float: left;
+	font-size: 14px;
+ height: 4rem;
+	width: 48%;
+	margin-right: 2%;
+}
+
+.yby{
+
+	float: right;
+	font-size: 14px;
+ height: 2rem;
+	width: 48%;
+
+
+}
+
+.nry{
+	width: 100%;
+	}
+
+
+.tijiao{
+	width: 25%;
+	margin-right: 2%;
+	height: 1rem;
+	float: left;
+	}
+	
+	
+
+
+.chongzhi{
+	width: 25%;
+	margin-right: 2%;
+	height: 1rem;
+		float: left;
+		}
+		
+
+.bjhd form input{
+	border: 1px solid #cacaca;
+}
+
+.bjhd form textarea{
+	border: 1px solid #cacaca;
+	margin-top: 20px;
+	width: 80%;
+}
+
+
+
+.bjly{
+	width: 92%;
+    padding: 3% 4%;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.lyb{
+	float: left;
+	width: 47%;
+	margin-right: 2%;
+	border: 1px solid #cacaca;
+	margin-top: 2%;
+	text-indent:10px ;
+	}
+
+.lyb textarea{
+	line-height: 24px;
+}
+
+.tjy{
+	float: left;
+  width: 25%;
+  height: 2rem;
+  border: 1px solid #cacaca;
+  margin-top: 2%;
+  margin-right: 2%;
+
+}
+
+.tjy input{
+	border: none;
+	width: 100%;
+	height: 100%;
+	background:none;  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.xcxc{
+	display: table;
+	margin: auto;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.scxg{
+	width: 100%;
+	height: 2em;
+	border-bottom:1px solid #cacaca ;
+}
+
+.xgz{
+	width: 80%;
+	float: left;
+	height: 2em;
+	line-height: 2em;
+	overflow: hidden;
+	font-size: 14px;
+}.xgz1{
+
+	float: left;
+	height: 2em;
+	line-height: 2em;
+	overflow: hidden;
+	font-size: 14px;
+}
+.xgz2{
+
+	float: right;
+	height: 2em;
+	line-height: 2em;
+	overflow: hidden;
+	font-size: 14px;
+}
+
+
+
+.fuzuo a {
+    color: #fff;
+    /* padding: 2% 15%; */
+    font-size: 14px;
+    border-radius: 50px;
+    display: block;
+    background-color: rgba(0,0,0,0.7);
+    float: left;
+}
